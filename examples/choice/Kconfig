@@ -1,0 +1,13 @@
+choice
+	prompt "Debug log output destination"
+
+config DEBUG_LOG_UART
+	bool "Debug messages over UART"
+
+config DEBUG_LOG_VGA
+	bool "Debug messages on VGA output"
+
+config DEBUG_LOG_TELNET
+	bool "Host telnet server for debug messages"
+
+endchoice

@@ -1,0 +1,10 @@
+config FOO
+	bool "Support for foo device"
+	help
+	  Enable the device drivers for a foo.
+
+config BAR
+	bool "Extra bar support"
+	help
+	  Enable support for more features from
+	  the foo device, supporting bar and baz.

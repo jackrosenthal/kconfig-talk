@@ -1,0 +1,12 @@
+out/
+auto/
+#*#
+/*.tex
+/*.pdf
+/*.log
+/*.aux
+/*.nav
+/*.out
+/*.snm
+/*.toc
+/*.vrb

@@ -1,0 +1,9 @@
+menu "My Menu"
+
+config OPT1
+	bool "Option 1"
+
+config OPT2
+	bool "Option 2"
+
+endmenu

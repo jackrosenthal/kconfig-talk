@@ -5,7 +5,7 @@ DOTCONFIG := $(OUTDIR)/.config
 AUTOHEADER := $(OUTDIR)/kconfig.h
 CONFIG_OUT := $(OUTDIR)/build.conf
 
-_ := $(shell KCONFIG_CONFIG=$(CONFIG_OUT) \
+_ := $(shell KCONFIG_CONFIG=$(DOTCONFIG) \
 	     3rdparty/kconfiglib/genconfig.py \
 		--header-path="$(AUTOHEADER)" \
 		--config-out="$(CONFIG_OUT)")
@@ -55,7 +55,7 @@ cmd_clean_name = CLEAN
 cmd_clean = rm -rf $(1)
 
 cmd_conf_name = CONF
-cmd_conf = 3rdparty/kconfiglib/$(1).py
+cmd_conf = KCONFIG_CONFIG=$(DOTCONFIG) 3rdparty/kconfiglib/$(1).py
 
 .SECONDARY:
 .PHONY: all
